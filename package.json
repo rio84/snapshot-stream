@@ -1,0 +1,62 @@
+{
+  "name": "snapshot-stream",
+  "version": "2.1.0",
+  "description": "Capture screenshot of a website and return it as a stream",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rio84/snapshot-stream.git"
+  },
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "files": [
+    "index.js",
+    "stream.js"
+  ],
+  "keywords": [
+    "image",
+    "page",
+    "phantom",
+    "phantomjs",
+    "resolution",
+    "screen",
+    "screenshot",
+    "size",
+    "stream",
+    "url"
+  ],
+  "dependencies": {
+    "base64-stream": "^0.1.2",
+    "es5-shim": "^4.0.3",
+    "object-assign": "^2.1.1",
+    "parse-cookie-phantomjs": "^1.0.0",
+    "parse-headers": "^2.0.0",
+    "phantomjs": ""
+  },
+  "devDependencies": {
+    "ava": "0.0.4",
+    "concat-stream": "^1.4.6",
+    "cookie": "^0.1.2",
+    "image-size": "^0.3.3",
+    "is-jpg": "^1.0.0",
+    "is-png": "^1.0.0",
+    "png-js": "^0.1.1"
+  },
+
+  "maintainers": [
+    {
+      "name": "rio84",
+      "email": "rio84@qq.com"
+    }
+  ]
+
+}
