@@ -20,7 +20,8 @@
   },
   "files": [
     "index.js",
-    "stream.js"
+    "stream.js",
+    "lib"
   ],
   "keywords": [
     "image",
