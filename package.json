@@ -1,6 +1,6 @@
 {
   "name": "snapshot-stream",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Capture screenshot of a website and return it as a stream",
   "license": "MIT",
   "repository": {
