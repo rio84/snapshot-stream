@@ -41,7 +41,7 @@
     "object-assign": "^2.1.1",
     "parse-cookie-phantomjs": "^1.0.0",
     "parse-headers": "^2.0.0",
-    "phantomjs": ">=2.1.7"
+    "phantomjs-prebuilt": ""
   },
   "devDependencies": {
     "ava": "0.0.4",
