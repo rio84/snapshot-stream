@@ -1,12 +1,12 @@
 # screenshot-stream [![Build Status](http://img.shields.io/travis/kevva/screenshot-stream.svg?style=flat)](https://travis-ci.org/kevva/screenshot-stream)
-
+## Copy from screenshot-stream; Fix it's bug!
 > Capture screenshot of a website and return it as a stream
 
 
 ## Install
 
 ```
-$ npm install --save screenshot-stream
+$ npm install --save snapshot-stream
 ```
 
 
@@ -14,7 +14,7 @@ $ npm install --save screenshot-stream
 
 ```js
 var fs = require('fs');
-var screenshot = require('screenshot-stream');
+var screenshot = require('snapshot-stream');
 
 var stream = screenshot('http://google.com', '1024x768', {crop: true});
 
@@ -24,7 +24,7 @@ stream.pipe(fs.createWriteStream('google.com-1024x768.png'));
 
 ## API
 
-### screenshot(url, size, options)
+### snapshot(url, size, options)
 
 #### url
 
