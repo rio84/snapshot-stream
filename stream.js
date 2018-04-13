@@ -2,7 +2,7 @@
 'use strict';
 var system = require('system');
 var page = require('webpage').create();
-var objectAssign = require('object-assign');
+
 var opts = JSON.parse(system.args[1]);
 var log = console.log;
 
@@ -17,7 +17,7 @@ console.log = console.error = function () {
 };
 
 if (opts.username && opts.password) {
-	opts.headers = objectAssign({}, opts.headers, {
+	opts.headers = Object.assign({}, opts.headers, {
 		Authorization: 'Basic ' + btoa(opts.username + ':' + opts.password)
 	});
 }

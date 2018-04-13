@@ -1,6 +1,6 @@
 {
   "name": "snapshot-stream",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Capture screenshot of a website and return it as a stream",
   "license": "MIT",
   "repository": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "node test/test.js"
@@ -37,15 +37,13 @@
   ],
   "dependencies": {
     "base64-stream": "^0.1.2",
-    "es5-shim": "^4.0.3",
-    "object-assign": "^2.1.1",
     "parse-cookie-phantomjs": "^1.0.0",
     "parse-headers": "^2.0.0",
     "phantomjs-prebuilt": ""
   },
   "devDependencies": {
-    "ava": "0.0.4",
-    "concat-stream": "^1.4.6",
+    "ava": "0.25.0",
+    "concat-stream": "^1.6.2",
     "cookie": "^0.1.2",
     "image-size": "^0.3.3",
     "is-jpg": "^1.0.0",

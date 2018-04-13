@@ -2,15 +2,15 @@
 var fs = require('fs');
 var path = require('path');
 var base64Stream = require('base64-stream');
-var es5Shim = require.resolve('es5-shim');
+//var es5Shim = require.resolve('es5-shim');
 var parseCookiePhantomjs = require('parse-cookie-phantomjs');
 var parseHeaders = require('parse-headers');
 var phantomBridge = require('./lib/phantom-bridge');
-var objectAssign = require('object-assign');
-var es5shim;
+
+//var es5shim;
 
 module.exports = function (url, size, opts) {
-	opts = objectAssign({
+	opts = Object.assign({
 		delay: 0,
 		scale: 1
 	}, opts);
@@ -18,16 +18,16 @@ module.exports = function (url, size, opts) {
 	opts.url = url;
 	opts.width = size.split(/x/i)[0] * opts.scale;
 	opts.height = size.split(/x/i)[1] * opts.scale;
-	opts.es5shim = opts.es5shim !== false ? path.relative(path.join(__dirname, 'lib'), es5Shim) : null;
+	//opts.es5shim = opts.es5shim !== false ? path.relative(path.join(__dirname, 'lib'), es5Shim) : null;
 	opts.format = opts.format === 'jpg' ? 'jpeg' : opts.format ? opts.format : 'png';
 	opts.headers = Array.isArray(opts.headers) ? parseHeaders(opts.headers.join('\n')) : opts.headers;
 	opts.cookies = (opts.cookies || []).map(function (cookie) {
 		return typeof cookie === 'string' ? parseCookiePhantomjs(cookie) : cookie;
 	});
-
+/*
 	if (opts.es5shim) {
 		es5shim = fs.readFileSync(es5Shim, 'utf8');
-	}
+	}*/
 
 	var cp = phantomBridge(path.join(__dirname, 'stream.js'), [
 		'--ignore-ssl-errors=true',
@@ -51,10 +51,10 @@ module.exports = function (url, size, opts) {
 		if (/http:\/\/requirejs.org\/docs\/errors.html#mismatch/.test(data)) {
 			return;
 		}
-
+/*
 		if (es5shim && es5shim.indexOf(data) !== -1) {
 			return;
-		}
+		}*/
 
 		if (/^WARN: /.test(data)) {
 			stream.emit('warn', data.replace(/^WARN: /, ''));
